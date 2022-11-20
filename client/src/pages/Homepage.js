@@ -7,8 +7,11 @@ import {
   TabPanel,
   TabPanels,
   Tabs,
-  Text
+  Text,
+  Center
 } from '@chakra-ui/react';
+import Login from '../components/Authentification/Login';
+import Signup from '../components/Authentification/Signup';
 
 const Homepage = () => {
   return (
@@ -23,20 +26,22 @@ const Homepage = () => {
         borderRadius="lg"
         borderWidth="1px"
       >
-           <Text fontSize='4xl' fontFamily="work sans" color='black'>Talk-A-Tive</Text>
+        <Center>
+          <Text fontSize='4xl' fontFamily="work sans" color='black'>Talk-A-Tive</Text>
+        </Center>
       </Box>
       <Box bg="white" w="100%" p={4} borderRadius="lg" borderWidth="1px">
         <Tabs variant='soft-rounded' colorScheme='green'>
   <TabList mb="1rem">
     <Tab width="50%">Login</Tab>
-    <Tab width="50%">Sing up</Tab>
+    <Tab width="50%">Signup</Tab>
   </TabList>
   <TabPanels>
     <TabPanel>
-      <p>one!</p>
+     <Login/>
     </TabPanel>
     <TabPanel>
-      <p>two!</p>
+      <Signup/>
     </TabPanel>
   </TabPanels>
 </Tabs>
