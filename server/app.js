@@ -8,7 +8,8 @@ const { notFound, errorHandler } = require('./middlewares/errorMiddleware');
 
 connectDB();
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/userRouter');
+var usersRoutes = require('./routes/userRoutes');
+var chatRoutes = require('./routes/chatRoutes');
 
 var app = express();
 
@@ -23,7 +24,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/api/user', usersRouter);
+app.use('/api/user', usersRoutes);
+app.use('/api/chat', chatRoutes);
 
 app.use(notFound);
 app.use(errorHandler);
