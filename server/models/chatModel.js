@@ -14,7 +14,7 @@ const chatModel = mongoose.Schema(
             type: mongoose.Schema.Types.ObjectId,
             ref: "Message",
         },
-        groupeAdmin: {
+        groupAdmin: {
             type: mongoose.Schema.Types.ObjectId,
             ref: "User",
         },
